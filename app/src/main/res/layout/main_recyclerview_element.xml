@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="content"
+            type="com.assessment.tasknewslist.model.MainContent" />
+
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/newsImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:square_140="@{content.images.square_140}">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/newsHeadline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:text="@{content.title.empty? `No Data` : content.title}"
+            android:layout_margin="5dp">
+
+        </TextView>
+
+
+
+
+    </LinearLayout>
+
+</layout>
